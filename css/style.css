@@ -57,6 +57,7 @@ body {
 }
 .item {
   flex-basis: calc((100% - 20px) / 3);
+  outline: 2px solid red;
 }
 .item h2 {
   margin-top: 0;
