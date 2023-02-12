@@ -1,1 +1,37 @@
-test
+Modern-normalize
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+____________________
+styles:
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+.link {
+  text-decoration: none;
+}
+____________________
+reset styles:
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+____________________
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
