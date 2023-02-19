@@ -1,166 +1,18 @@
-.social-links .link {
-  color: teal;
-}
 .container {
-  min-height: 100vh;
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  background-color: #fff3f1;
+}
+.slider-box {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-
-.box {
-  width: 250px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-.box::before {
-  font-size: 20px;
-}
-
-.box:nth-child(1) {
-  /*   transform: translateX(50px); */
-
-  animation: animateX50 3000ms infinite 1000ms;
-  background-color: orange;
-}
-
-.box:nth-child(1)::before {
-  content: 'translateX(50px)';
-}
-
-.box:nth-child(2) {
-  /*   transform: translateY(110px); */
-
-  animation: animateY110 3000ms infinite 1000ms;
-  background-color: #03a9f4;
-}
-
-.box:nth-child(2)::before {
-  content: 'translateY(110px)';
-}
-
-.box:nth-child(3) {
-  /*   transform: translate(-50px, -100px); */
-
-  animation: animateX50Y100 3000ms infinite 1000ms;
-  background-color: palevioletred;
-}
-
-.box:nth-child(3)::before {
-  content: 'translate(-50px, -100px)';
-}
-
-@keyframes animateX50 {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(250px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes animateY110 {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(110px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes animateX50Y100 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-50px, -100px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-/* Два і більше селекторів розділяються комою */
-.social-links .link:hover,
-.social-links .link:focus {
-  color: orange;
-}
-.social-links .link:active {
-  color: red;
-}
-.social-links .link:visited {
-  color: yellowgreen;
-}
-
-.schedule-body > tr:hover {
-  background-color: tomato;
-  color: white;
-}
-
-/* Оформлення таблиці */
-.schedule {
-  border-collapse: collapse;
-}
-
-.schedule th,
-.schedule td {
-  padding: 8px;
-  border: 1px solid #212121;
-}
-.post-text {
-  text-indent: 100px;
-  font-size: 18px;
-}
-/*  */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: sans-serif;
-  line-height: 1.5;
-  background-color: #edf2f7;
-}
-.container {
-  max-width: 1200px;
-  padding: 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.item {
-  flex-basis: calc((100% - 20px) / 3);
-  outline: 2px solid red;
-}
-.item h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.item p {
-  margin: 0;
+.slider {
+  width: 284px;
+  height: 280px;
+  padding: 4px;
+  border: 6px solid rgb(123, 118, 118);
 }
