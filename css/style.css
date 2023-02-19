@@ -1,6 +1,9 @@
+body {
+  background-color: rgb(219, 217, 217);
+}
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 920px;
   padding-left: 16px;
   padding-right: 16px;
   margin: auto;
