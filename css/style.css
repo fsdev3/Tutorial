@@ -14,11 +14,13 @@ body {
 }
 .slider {
   width: 920px;
-  height: 316px;
+  height: 300px;
 }
 .slider2 {
-  width: 640px;
-  height: 480px;
+  width: 642px;
+  height: 482px;
+  margin-top: 20px;
+  border: 1px solid black;
 }
 h1 {
   text-align: center;
