@@ -98,9 +98,39 @@
 
 // js для дітей книга
 
-let answer = prompt('What is official name of JavaScript?');
-if (answer === 'ECMAScript') {
-  alert('Right!');
-} else {
-  alert('Wrong! The correct name is ECMAScript!');
-}
+// let answer = prompt('What is official name of JavaScript?');
+// if (answer === 'ECMAScript') {
+//   alert('Right!');
+// } else {
+//   alert('Wrong! The correct name is ECMAScript!');
+// }
+
+// const a = 280;
+// const b = 80;
+// if (a > 100 && b > 100) {
+//   if (a > b) {
+//     console.log('a is max', a);
+//   } else if (a < b) {
+//     console.log('b is max', b);
+//   } else {
+//     console.log('a and b are equals', a);
+//   }
+// } else {
+//   console.log(b + 512);
+// }
+
+// let link = 'http://my-site.com/about';
+// if (!link.endsWith('/') && link.includes('my-site')) {
+//   link += '/';
+//   console.log('fixed');
+// }
+// console.log(link);
+
+// same with ternar operator!
+
+// let link = 'http://my-site.com/about';
+// let isNeedToFixUrl = !link.endsWith('/') && link.includes('my-site');
+
+// link += isNeedToFixUrl ? '/' : '';
+
+// console.log(link);
