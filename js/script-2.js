@@ -88,12 +88,19 @@
 // Підрахуйте суму чисел у діапазоні від 1 до 10 за допомогою циклу
 // for, while та do...while.
 // Підказка: у результаті має вийти 55.
-let i = 0;
-let total = 0;
-while (i <= 10) {
-  total += i;
-  i += 1;
-}
-console.log(total);
+// let i = 0;
+// let total = 0;
+// while (i <= 10) {
+//   total += i;
+//   i += 1;
+// }
+// console.log(total);
 
 // js для дітей книга
+
+let answer = prompt('What is official name of JavaScript?');
+if (answer === 'ECMAScript') {
+  alert('Right!');
+} else {
+  alert('Wrong! The correct name is ECMAScript!');
+}
