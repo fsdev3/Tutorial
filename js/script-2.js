@@ -134,3 +134,47 @@
 // link += isNeedToFixUrl ? '/' : '';
 
 // console.log(link);
+
+// need to understand !!!
+
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
+
+// // Для чисел, менших ніж порогове значення, спрацьовує continue, виконання тіла
+// // припиняється і управління передається на наступну ітерацію.
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+
+//   console.log(`Число більше за ${threshold}: ${numbers[i]}`); // 18, 29, 34
+// }
+
+// перебрать і додать, варіант 1 (є счотчик і можливість перезапису в ячейку)
+// const cart = [13, 223, 43, 5, 54, 25, 25, 74, 75];
+// let total = 0;
+
+// for (let i = 0; i < cart.length; i += 1) {
+//   total += cart[i];
+// }
+// console.log('total', total);
+
+// варіант 2 (якщо не треба счетчик і записувати в ячейку масиву, тільки зчитування)
+// const cart = [13, 223, 43, 5, 54, 25, 25, 74, 75];
+// let total = 0;
+
+// for (const value of cart) {
+//   total += value;
+// }
+// console.log('total', total);
+const numbers = [13, 44, 43, 5, 54, 25, 28, 74, 75];
+let total = 0;
+for (const number of numbers) {
+  if (number % 2 !== 0) {
+    console.log('skip this operation', number);
+    continue;
+  }
+  console.log(`${number} - even`);
+  total += number;
+}
+console.log('total', total);
