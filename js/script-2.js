@@ -69,7 +69,6 @@
 //виході має бути "кАжДыЙ оХоТнИк".
 
 // const str = 'КоЖнИй МиСлИвЕцЬ бАжАє ЗнАтИ';
-
 // function change_register(str) {
 //   let result = '';
 //   for (let i = 0; i < str.length; i += 1) {
@@ -82,8 +81,20 @@
 //   return result;
 // }
 // console.log(change_register(str));
-
 // change_register(str);
+
+// v2 new
+// const str = 'КоЖнИй МиСлИвЕцЬ бАжАє ЗнАтИ';
+// const letters = str.split('');
+// let changeRegister = '';
+
+// for (const letter of letters) {
+//   changeRegister +=
+//     letter === letter.toLowerCase()
+//       ? letter.toUpperCase()
+//       : letter.toLowerCase();
+// }
+// console.log(changeRegister);
 
 // Підрахуйте суму чисел у діапазоні від 1 до 10 за допомогою циклу
 // for, while та do...while.
@@ -167,14 +178,291 @@
 //   total += value;
 // }
 // console.log('total', total);
-const numbers = [13, 44, 43, 5, 54, 25, 28, 74, 75];
-let total = 0;
-for (const number of numbers) {
-  if (number % 2 !== 0) {
-    console.log('skip this operation', number);
-    continue;
-  }
-  console.log(`${number} - even`);
-  total += number;
-}
-console.log('total', total);
+
+// make total all even numbers
+// const numbers = [13, 44, 43, 5, 54, 25, 28, 74, 75];
+// let total = 0;
+// for (const number of numbers) {
+//   if (number % 2 !== 0) {
+//     console.log('skip this operation', number);
+//     continue;
+//   }
+//   console.log(`${number} - even`);
+//   total += number;
+// }
+// console.log('total', total);
+
+//  find login "qiwefbQW", show messaeges
+// const logins = ['awefb', 'ukqyec', 'qiwefbQW', 'QWIFBIOB'];
+// const loginToFind = 'qiwefbQW';
+// let message = `Login ${loginToFind} is not found!`;
+
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+//   console.log(`Login: `, login);
+
+//   if (login === loginToFind) {
+//     message = `Login ${loginToFind} found!`;
+//     break;
+//   }
+// }
+// console.log(message);
+
+// v2 !  for - of
+// for (const login of logins) {
+//   console.log(`Login: `, login);
+
+//   if (login === loginToFind) {
+//     message = `Login ${loginToFind} found!`;
+//     break;
+//   }
+// }
+// console.log(message);
+// V3 includes + ternar operator
+// const message = logins.includes(loginToFind)
+//   ? `Login ${loginToFind} found!`
+//   : `Login ${loginToFind} not found!`;
+// console.log(message);
+
+// find the smallest number from massive
+// const numbers = [11, 22, 54, 87, 21, 6, 81, 52, 5, 95];
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
+// console.log(`Smallest Number: `, smallestNumber);
+
+// find the biggest number from massive
+// const numbers = [11, 22, 54, 87, 21, 6, 81, 52, 5, 95];
+// let biggestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number > biggestNumber) {
+//     biggestNumber = number;
+//   }
+// }
+// console.log(`Biggest Number: `, biggestNumber);
+
+// join all names with For, then with Join
+// const friends = ['Margo', 'Oleg', 'Tom', 'Hanna'];
+// // creating string, adding to this string
+// let string = '';
+// for (const friend of friends) {
+//   string += friend + ',';
+// }
+// // console.log(string.pop());
+// string = string.slice(0, string.length - 1);
+// console.log(string);
+//
+// v2 Join!
+// console.log(friends.join(', '));
+
+// "Top 10 benefits of react Framework" to site.com/top-10-benefits-of-react-framework
+// const title = 'Top 10 benefits of react Framework';
+// // const normalizedTitle = title.toLowerCase();
+// // const words = normalizedTitle.split(' '); // string to massive!
+// // const slug = words.join('-');
+
+// // or one string by chain!!!
+// const slug1 = title.toLowerCase().split(' ').join('-');
+// console.log(slug1);
+
+// add all numbers: concat, add. (not destructive method - left both massives as before)
+// const array1 = [5, 10, 15, 20, 25];
+// const array2 = [10, 15, 20, 25];
+// let total = 0;
+// const numbers = array1.concat(array2);
+
+// for (const number of numbers) {
+//   total += number;
+// }
+
+// console.log(total);
+
+// splice - destructive - changing massive !! (also destructive methods: pop, push)
+// const cards = ['Carta-1', 'Carta-2', 'Carta-3', 'Carta-4', 'Carta-5'];
+// // const cardToRemove = 'Carta-3';
+// // const index = cards.indexOf(cardToRemove); take Index or card and remove
+
+// // cards.splice(index, 1);
+
+// // const cardToInsert = 'Card-6';
+// const index = 3;
+// // cards.splice(index, 0, cardToInsert); // adding card
+// const cardToUpdate = 'Card-8';
+// cards.splice(3, 1, cardToUpdate);// updating card
+// console.log(index);
+// console.table(cards);
+// function multiply() {
+//   let total = 1;
+
+//   for (const argument of arguments) {
+//     total *= argument;
+//   }
+
+//   return total;
+// }
+
+// functions -----------------------------------------------------------------------!!!
+// calc to total
+// const calcTotal = function (items) {
+//   console.log('items inside function: ', items);
+//   let total = 0;
+
+//   for (const item of items) {
+//     total += item;
+//   }
+//   return total;
+// };
+// const result1 = calcTotal([2, 6, 9]);
+
+// console.log(`Total of numbers:  ${result1}`);
+
+// console.log(calcTotal([23, 16, 94, 55]));
+// console.log(calcTotal([27, 36, 59, 63, 72]));
+
+//
+// const logins = ['awefb', 'ukqyec', 'qiwefbQW', 'QWIFBIOB'];
+
+// const findLogin = function (allLogins, loginToFind) {
+//   for (const login of allLogins) {
+//     if (login === loginToFind) {
+//       return `User login ${loginToFind} found!`;
+//     }
+//   }
+
+//   return `User login ${loginToFind} NOT found!`;
+// };
+
+// v2 - ternar operator
+// const findLogin = function (allLogins, loginToFind) {
+//   const message = allLogins.includes(loginToFind)
+//     ? `User login ${loginToFind} found!`
+//     : `User login ${loginToFind} NOT found!`;
+//   return message;
+// };
+// v3 - short ternar!
+// const findLogin = function (allLogins, loginToFind) {
+//   return allLogins.includes(loginToFind)
+//     ? `User login ${loginToFind} found!`
+//     : `User login ${loginToFind} NOT found!`;
+// };
+
+// console.log(findLogin(logins, 'awefb'));
+// console.log(findLogin(logins, 'kebage'));
+// console.log(findLogin(logins, 'qiwefbQW'));
+// console.log(findLogin(logins, 'awsergefb'));
+
+// find the smallest number from massive
+
+// const findSmallestNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
+
+//   for (const number of numbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number;
+//     }
+//   }
+
+//   return smallestNumber;
+// };
+
+// // console.log(`Smallest Number: `, smallestNumber);
+// console.log(findSmallestNumber([6, 32, 41, 9, 43, 67]));
+// console.log(findSmallestNumber([62, -2, 21, 91, 13, 37]));
+// console.log(findSmallestNumber([16, 12, -1, 29, 53, 7]));
+
+// "Top 10 benefits of react Framework" to site.com/top-10-benefits-of-react-framework
+
+// const slugify = function (string) {
+//   //   const normalizedString = string.toLowerCase();
+//   //   const words = normalizedString.split(' ');
+//   //   const slug = words.split(' ');
+
+//   //   return slug;
+//   // v2 short ternar!
+//   return string.toLowerCase().split(' ').join('-');
+// };
+
+// console.log(slugify('Top 10 benefits of react Framework'));
+// console.log(slugify('Azure Static Web App are Avesome'));
+// console.log(slugify('Technical Writing Tips for non-native English speakers'));
+
+// modern syntax to makes massives from the strings - method Rest.
+// const fn = function (...args) {
+//   console.log(args);
+// };
+// fn(2, 4, 6, 8);
+// fn(12, 42, 36, 18);
+// fn(22, 34, 46, 28, 17);
+
+// count total
+// const add = function (...args) {
+//   console.log(args);
+//   let total = 0;
+
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// };
+
+// console.log(add(12, 42, 36, 18));
+// console.log(add(142, 2, 26, 98, 43));
+
+// separate and make massives
+
+// const filterNumbers = function (array, ...args) {
+//   console.log('array: ', array);
+//   console.log('args: ', args);
+//   const uniqueElements = [];
+
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       uniqueElements.push(element);
+//       console.log(`${element} present in both!`);
+//     }
+//   }
+//   return uniqueElements;
+// };
+
+// console.log(filterNumbers([1, 2, 3, 4, 5], 7, 2, 180, 3, 15, 20, 45));
+// console.log(filterNumbers([10, 15, 25, 30, 35], 9, 2, 10, 3, 15, 29, 25));
+// console.log(filterNumbers([100, 200, 300, 400, 500], 4, 100, 3, 15, 200, 25));
+
+//
+// functions Kovalevsky D.
+// function toNumber(srt) {
+//   return Number(srt.replace(',', '.'));
+// } // global function for chenges , to .
+
+// function calcBMI(weight, height) {
+//   weight = toNumber(weight);
+//   height = toNumber(height);
+//   let result = weight / Math.pow(height, 2);
+//   return result.toFixed(1);
+// }
+
+// const bmi = calcBMI('88,3', '1,75');
+// console.log(bmi);
+
+// min number
+// function min(a, b) {
+//   return a < b ? a : b;
+// }
+
+// console.log(min(2, 5));
+// console.log(min(2, -1));
+// console.log(min(7, 5));
+
+// function getRectArea(dimensions) {
+//   let dimensionsParts = dimensions.split(' ');
+//   let width = toNumber(dimensionsParts[0]);
+//   let height = toNumber(dimensionsParts[1]);
+//   return width * height;
+// }
+
+// console.log(getRectArea('8,5 12.6'));
