@@ -378,11 +378,12 @@
 // "Top 10 benefits of react Framework" to site.com/top-10-benefits-of-react-framework
 
 // const slugify = function (string) {
-//   //   const normalizedString = string.toLowerCase();
-//   //   const words = normalizedString.split(' ');
-//   //   const slug = words.split(' ');
+//   const normalizedString = string.toLowerCase();
+//   const words = normalizedString.split(' ');
+//   const slug = words.join('-');
 
-//   //   return slug;
+//   return slug;
+// };
 //   // v2 short ternar!
 //   return string.toLowerCase().split(' ').join('-');
 // };
@@ -466,3 +467,55 @@
 // }
 
 // console.log(getRectArea('8,5 12.6'));
+// function checkStorage(available, ordered) {
+//   // Change code below this line
+//   let message;
+
+//   if (ordered === 0) {
+//     message = "Your order is empty!";
+//   } else (ordered > available) {
+//     message = "Your order is too large, not enough goods in stock!";
+//   }
+//     message = "The order is accepted, our manager will contact you";
+
+//   return message;
+//   // Change code above this line
+// }
+//
+// calculate total sum
+
+// function calculateTotal(number) {
+//   let total = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     total += i;
+//   }
+
+//   return total;
+// }
+// calculateTotal(24);
+
+// calculate total
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+//   // Change code above this line
+//   //   return total;
+//   console.log(total);
+// }
+// calculateTotalPrice([164, 48, 291]);
+
+// max word from array
+// function findLongestWord(string) {
+//   let words = string.split(' ');
+//   let maxLengthWord = words[0];
+//   for (const word of words) {
+//     if (word.length > maxLengthWord.length) {
+//       maxLengthWord = word;
+//     }
+//   }
+//   console.log(maxLengthWord);
+// }
+// findLongestWord('The quick brown fox jumped over the lazy dog');
