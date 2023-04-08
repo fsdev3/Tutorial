@@ -519,3 +519,114 @@
 //   console.log(maxLengthWord);
 // }
 // findLongestWord('The quick brown fox jumped over the lazy dog');
+
+// new array from min to max numbers
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   //   return numbers;
+//   console.log(numbers);
+// }
+// createArrayOfNumbers(14, 17);
+
+// add biggest number than Value to new Array
+// function filterArray(numbers, value) {
+//   const biggerThanValueNumbers = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       biggerThanValueNumbers.push(numbers[i]);
+//     }
+//     continue;
+//   }
+//   // return biggerThanValueNumbers;
+//   console.log(biggerThanValueNumbers);
+// }
+// V2 refactoring
+// function filterArray(numbers, value) {
+//   const biggerThanValueNumbers = [];
+//   for (number of numbers) {
+//     if (number > value) {
+//       biggerThanValueNumbers.push(number);
+//     }
+//   }
+//   return biggerThanValueNumbers;
+// }
+// filterArray([12, 24, 8, 41, 76], 20) returns [24, 41, 76]
+
+// checking fruits and return boolean
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+//   if (fruits.includes(fruit)) {
+//     return true;
+//   }
+//   return false; // Change this line
+// }
+// // V2 ternarniy operator
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+//   fruits.includes(fruit) ? console.log(true) : console.log(false); // Change this line
+// }
+// checkFruit('plum');
+
+// find the same elements in both arrays and create new array with same numbers
+// function getCommonElements(array1, array2) {
+//   let arraySameNumbers = [];
+
+//   for (const element of array1) {
+//     if (array2.includes(element)) {
+//       arraySameNumbers.push(element);
+//     }
+//   }
+//   return arraySameNumbers;
+// }
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+
+// // calculate the total price
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (itemPrice of order) {
+//     total += itemPrice;
+//   }
+//   return total;
+// }
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+// iterate the array, find even numbers and make a new array with them
+// function getEvenNumbers(start, end) {
+//   const evenNumbers = [];
+// for (let i = start; i <= end; i += 1) {
+//   if (i % 2 === 0) {
+//     evenNumbers.push(i)
+//   }
+// }
+// return evenNumbers;
+//   }
+// getEvenNumbers(6, 12) returns [6, 8, 10, 12]
+
+// find the first number between start and stop which % WO rest
+// function findNumber(start, end, divisor) {
+//   let number;
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       number = i;
+//       return number;
+//       // break;
+//     }
+//   }
+//   //console.log(number);
+// }
+// findNumber(16, 35, 7); // повертає 21
+//
+// iterate array and compare if include value (can't use .include method)
+// function includes(array, value) {
+//   for (let element of array) {
+//     if (element === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// includes([1, 2, 3, 4, 5], 3); // returns true
+// includes([1, 2, 3, 4, 5], 17);  // returns false
