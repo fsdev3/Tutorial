@@ -140,7 +140,95 @@
 // // Change code below this line
 // const keys = Object.keys(apartment);
 // for (let key of keys) {
-//   values.push(apartment[key]);
+//   values.push(apartment[key]); push key value to array
 // }
 // console.log([keys]);
 // console.log([values]);
+
+// count and return quantity of properties in object
+// function countProps(object) {
+//   const propCount = Object.keys(object);
+//   // return propCount.length;
+//   console.log(propCount.length);
+// }
+// countProps({ name: 'Mango', age: 2 });
+
+// count total salary
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   for (const value of Object.values(salaries)) {
+//     totalSalary += value;
+//   }
+//   return totalSalary;
+// }
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+
+// iterate objects and create 2 arrays
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// for (let color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// check the name if found, return price, if no - null
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+// function getProductPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+// }
+// getProductPrice('Scanner');
+
+// iterate and create arrays. if no such key - return empty array
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const productValue = [];
+//   for (const product of products)
+//     if (product.hasOwnProperty([propName])) {
+//       productValue.push(product[propName]);
+//     }
+//   return productValue;
+// }
+// getAllPropValues('name');
+// getAllPropValues('category');
+
+// calc total price
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+// function calculateTotalPrice(productName) {
+//   let totalPrice = 0;
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       totalPrice = product.price * product.quantity;
+//     }
+//   }
+//   return totalPrice;
+// }
+// calculateTotalPrice('Radar');
