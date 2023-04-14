@@ -232,3 +232,80 @@
 //   return totalPrice;
 // }
 // calculateTotalPrice('Radar');
+
+// ------------- DESTRUCTURIZATION ---------------
+// destr of array
+// const authors = {
+//   kivi: 4,
+//   poly: 6,
+//   ajax: 7,
+//   mango: 8,
+// };
+
+// const entries = Object.entries(authors);
+// // first top!! ->
+// for (const [name, rating] of entries) {
+//   //   const [name, rating] = entry; // l2 little better
+//   //   const name = entry[0]; l3 not good
+//   //   const rating = entry[1];
+//   console.log(name, rating);
+// }
+
+// ------------ cart  Repeta  Modul3 les6 1:41 destruct Cart
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     for (const item of this.items) {
+//       if (item.name === product.name) {
+//         item.quantity += 1;
+//         return;
+//       }
+//     }
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     }; // raspilenie
+//     this.items.push(newProduct);
+//   },
+//   remove(productName) {
+//     const { items } = this; // destruct 'this' in next 2 strings
+//     for (let i = 0; i < items.length; i += 1) {
+//       const item = items[i]; // destruct "item" to {name}, next string "item.name" to "name"
+//       if (productName === item.name) {
+//         console.log('product found! ', productName);
+//         console.log('index ', i);
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//     const { items } = this;
+//     let totalPrice = 0;
+//     for (const { price, quantity } of items) {
+//       totalPrice += price * quantity;
+//     }
+//     return totalPrice;
+//   },
+//   increaseQuantity(productName) {},
+//   decreaseQuantity(productName) {},
+// };
+// console.log(cart.getItems());
+
+// cart.add({ name: 'apple', price: 50 });
+// cart.add({ name: 'mango', price: 80 });
+// cart.add({ name: 'kiwi', price: 30 });
+// cart.add({ name: 'kiwi', price: 30 });
+// cart.add({ name: 'orange', price: 70 });
+
+// console.table(cart.getItems());
+// console.log('total ', cart.countTotalPrice());
+// cart.remove('mango');
+// console.table(cart.getItems());
+// cart.clear();
+// console.log(cart.getItems());
