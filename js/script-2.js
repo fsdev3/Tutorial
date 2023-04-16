@@ -630,3 +630,251 @@
 // }
 // includes([1, 2, 3, 4, 5], 3); // returns true
 // includes([1, 2, 3, 4, 5], 17);  // returns false
+
+//Напишіть функцію copyArr(arr), яка копіює масив, не змінюючи оригінал.
+// const vegetables = ['Капуста', 'Ріпа', 'Редиска', 'Морква'];
+// function arrayClone(arr) {
+//   return arr.slice();
+// }
+// const array = arrayClone(vegetables);
+// console.log(array === vegetables);
+
+// 2 методи створити рядок з масиву
+// const vegetables = ['Капуста', 'Ріпа', 'Редиска', 'Морква'];
+
+// let result = '';
+// for (const vegetable of vegetables) {
+//   result += vegetable + ', ';
+// }
+// console.log(result.slice(0, -2));
+// // console.log(vegetables.join(', '));
+
+// Напишіть функцію removeDuplicates(arr), яка повертає масив, у якому видалено
+// повторювані елементи з масиву arr (ігноруйте чутливість до регістру).
+
+// var arr = [
+//   'php',
+//   'php',
+//   'css',
+//   'css',
+//   'script',
+//   'script',
+//   'html',
+//   'html',
+//   'java',
+// ];
+// function removeDuplicates(arr) {
+//   const newArr = [];
+//   for (const item of arr) {
+//     if (!newArr.includes(item)) {
+//       newArr.push(item);
+//     }
+//   }
+//   return newArr;
+// }
+
+// version 2
+// function removeDuplicates(arr) {
+//   return [...new Set(arr)]; // Set - array WO duplicate
+// }
+// console.log(removeDuplicates(arr));
+
+//Напишіть функцію, яка приймає
+// рядок як аргумент та замінює регістр кожного символу на протилежний.
+// Наприклад, якщо вводиться 'КоЖниЙ МиСлИВеЦЬ', то на виході повинен бути масив "КоЖниЙ МиСлИВеЦЬ".
+
+// const str = 'КоЖниЙ МиСлИВеЦЬ';
+// let result = '';
+// // for (const letter of str) {
+// //   if (letter.toUpperCase() === letter) {
+// //     result += letter.toLowerCase();
+// //   } else {
+// //     result += letter.toUpperCase();
+// //   }
+// //   console.log(letter);
+// // }
+
+// console.log(result);
+
+/*
+ * Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
+ */
+// function findLargestNumber(numbers) {
+//   //   return Math.max(...numbers); easyest way
+//   let maxNumber = 0;
+//   for (const number of numbers) {
+//     if (number > maxNumber) {
+//       maxNumber = number;
+//     }
+//   }
+//   return maxNumber;
+// }
+
+// console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
+// console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+
+/*
+ * Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
+ */
+
+// function calAverage(...args) {
+//   let result = 0;
+//   for (const number of args) {
+//     result += number;
+//   }
+//   return result / args.length;
+// }
+// console.log(calAverage(1, 2, 3, 4)); // 2.5
+// console.log(calAverage(14, 8, 2)); // 8
+// console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+
+/*
+ * Напиши скрипт, який, для об'єкта user, послідовно:
+ * додає поле mood зі значенням 'happy'
+ * замінює значення hobby на 'skydiving'
+ * замінює значення premium на false
+ * виводить вміст об'єкта user у форматі ключ: значення використовуючи Object.keys() і for...of
+ */
+
+// const user = {
+//   name: 'John',
+//   age: 21,
+//   hobby: 'css',
+//   premium: true,
+// };
+
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
+
+// let keys = Object.keys(user);
+// for (const key of keys) {
+//   console.log(key, user[key]);
+// }
+
+/*
+ * У нас є об'єкт, у якому зберігаються зарплати нашої команди. Напишіть код для підсумовування всіх зарплат та збережіть результат у змінній sum. Повинно вийти 390. Якщо об'єкт salaries порожній, результат має бути 0.
+ */
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// let sum = 0;
+// let values = Object.values(salaries);
+// for (const value of values) {
+//   sum += value;
+// }
+// console.log(sum);
+
+// //Напишіть функцію, яка перевіряє, чи є елемент саме простим об'єктом, а не масивом, null тощо.
+// function isPlainObject(param) {
+//   return typeof param === 'object' && !Array.isArray(param) && param !== null; official mistake in JS!!!
+// }
+// console.log(isPlainObject({ a: 1 })); // true
+// console.log(isPlainObject([])); // false
+// console.log(isPlainObject(null)); // false
+// console.log(isPlainObject(1)); // false
+// console.log(isPlainObject(undefined)); // false
+
+// Опис завдання: Напишіть функцію, яка повертає вкладений масив виду `[[key, value], [key, value]]`.
+// Очікуваний результат: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+
+// const data = { a: 1, b: 2 };
+
+// function makePairs(obj) {
+//   //   return Object.entries(obj); best versin
+//   let result = [];
+//   const keys = Object.keys(obj);
+//   for (const key of keys) {
+//     result.push([key], obj[key]);
+//   }
+//   return result;
+// }
+
+// console.log(makePairs(data)); // [['a', 1], ['b', 2]]
+
+//Опис завдання: Напишіть функцію, яка повертає новий об'єкт без зазначених значень.
+// Очікуваний результат: ({ a: 1, b: 2 }, 'b') => { a: 1 }
+
+// home work!
+// function without(obj, key) {
+//   delete obj[key];
+//   return obj;
+// }
+
+// const data = { a: 1, b: 2, c: 3 };
+// console.log(without(data, 'b', 'c')); // { a: 1 } - how to delete b and c
+
+// ------------- Tasks -----------
+// 33 - compare numbers, if same - to new array
+// function findMatches(array, ...args) {
+//   const matches = []; // Don't change this line
+//   for (const arg of args) {
+//     if (array.includes(arg)) {
+//       matches.push(arg);
+//     }
+//   }
+//   // Change code above this line
+//   // return matches;
+//   console.log(matches);
+// }
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+
+// - 35 - change the book
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     this.books.splice(this.books.indexOf(oldName), 1, newName);
+//   },
+// };
+// bookShelf.updateBook('Haze', 'Dungeon chronicles');
+// console.log(bookShelf.books);
+
+// - 39 - delete item
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   removePotion(potionName) {
+//     this.potions.splice(this.potions.indexOf(potionName), 1);
+//   },
+// };
+
+// module 3 autocheck - 41
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       if (Object.values(potion).includes(newPotion['name'])) {
+//         return `Error! Potion ${newPotion['name']} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (this.potions[i].name === potionName) {
+//         this.potions.splice(i, 1);
+//         return;
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (this.potions[i].name === oldName) {
+//         this.potions[i].name = newName;
+//         return;
+//       }
+//     }
+//   },
+// };
