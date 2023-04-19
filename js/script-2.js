@@ -859,6 +859,16 @@
 //     }
 //     this.potions.push(newPotion);
 //   },
+
+//   addPotion(newPotion) {
+//     for (let potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);  // V2 think better
+//   },
+
 //   removePotion(potionName) {
 //     for (let i = 0; i < this.potions.length; i += 1) {
 //       if (this.potions[i].name === potionName) {
