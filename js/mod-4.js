@@ -108,3 +108,162 @@
 
 // logItems(['Mango', 'Kiwi', 'Lemon']);
 // logItems([21, 34, 62, 104]);
+
+// function printContactsInfo({ names, phones }) {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   nameList.forEach((item, i) => {
+//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   });
+
+//   //   for (let i = 0; i < nameList.length; i += 1) {
+//   //     console.log(`${nameList[i]}: ${phoneList[i]}`); old version
+//   //   }
+// }
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+
+// refactoring
+// function calculateAverage(...args) {
+//   let total = 0;
+//   args.forEach(item => {
+//     total += item;
+//   }); // new code
+//   // for (let i = 0; i < args.length; i += 1) {
+//   //   total += args[i];  old code
+//   // }
+//   return total / args.length;
+// }
+
+// console.log(calculateAverage(1, 2, 3, 4));
+// console.log(calculateAverage(6, 22, 13, 34));
+// Колбек-функція
+
+// Change code below this line
+// let totalPrice = 0;
+// const calculateTotalPrice = orderedItems => {
+//   orderedItems.forEach(item => (totalPrice += item));
+
+//   return totalPrice;
+// };
+// // Change code above this line
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+
+//   numbers.forEach(item => {
+//     if (item % 2 === 0) {
+//       newArray.push(item + value);
+//       return;
+//     }
+//     newArray.push(item);
+//   });
+//   // return newArray;
+//   console.log(newArray);
+//   // Change code above this line
+// }
+// changeEven([1, 2, 3, 4, 5], 10); //` повертає новий масив `[1, 12, 3, 14, 5]`
+
+// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
+// // Change code below this line
+// const planetsLengths = planets.map(planet => planet.length);
+// console.log(planet.length());
+
+// m4 z17
+// const users = [
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//   },
+// ];
+// const getUserNames = users => users.map(user => user.name);
+
+// console.log(getUserNames(users));
+
+// zad 20
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     genres: ['adventure', 'history'],
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     genres: ['fiction', 'mysticism'],
+//   },
+//   {
+//     title: 'Redder Than Blood',
+//     author: 'Tanith Lee',
+//     genres: ['horror', 'mysticism', 'adventure'],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter(
+//   (genre, index, array) => array.indexOf(genre) === index
+// );
+
+// console.log(allGenres);
+// console.log(uniqueGenres);
+
+// zad 25
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+// ];
+
+// const getFriends = users =>
+//   users
+//     .flatMap(user => user.friends)
+//     .filter((friend, index, array) => array.indexOf(friend) === index); // V2 - one chain
+
+// const allFriends = users.flatMap(user => user.friends); // V1
+// const getFriends = (users, allFriends) =>
+//   allFriends.filter((friend, index, array) => array.indexOf(friend) === index);
+
+// console.log(allFriends);
+// console.log(getFriends);
