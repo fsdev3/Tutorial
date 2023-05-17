@@ -240,3 +240,20 @@
 // console.log(myNotes);
 // Запитуємо назву готеля, в якому хотів би зупинитися клієнт
 // і зберігаємо результат виклику prompt у змінну.
+//
+// console.log(positiveSum([10, 2, 3, 4, 5]));
+// const { assert } = require('chai');
+
+// describe('Basic tests', () => {
+//   it('Testing for fixed tests', () => {
+//     assert.strictEqual(positiveSum([1, 2, 3, 4, 5]), 15);
+//     assert.strictEqual(positiveSum([1, -2, 3, 4, 5]), 13);
+//     assert.strictEqual(positiveSum([]), 0);
+//     assert.strictEqual(positiveSum([-1, -2, -3, -4, -5]), 0);
+//     assert.strictEqual(positiveSum([-1, 2, 3, 4, -5]), 9);
+//   });
+// });
+
+// function positiveSum(arr) {
+//   return arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
+// }
