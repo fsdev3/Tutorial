@@ -40,3 +40,5 @@
 //     .toString(16)
 //     .padStart(2, '0');
 // }
+// 1. Оголошення параметрів x, y, z
+// Will run first
