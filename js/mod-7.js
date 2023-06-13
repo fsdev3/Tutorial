@@ -42,3 +42,4 @@
 // }
 // 1. Оголошення параметрів x, y, z
 // Will run first
+// Change value of isSuccess variable to call resolve or reject
