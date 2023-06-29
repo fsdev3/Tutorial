@@ -43,3 +43,17 @@
 // 1. Оголошення параметрів x, y, z
 // Will run first
 // Change value of isSuccess variable to call resolve or reject
+// Оголошення функції (function declaration)
+
+// function isIsogram(str) {
+//   let array = str.toLowerCase().split('');
+//   console.log(array);
+//   const newArray = array.filter(
+//     (value, index, arr) => arr.indexOf(value) === index
+//   );
+//   console.log(newArray);
+//   if (array.length === newArray.length) {
+//     return true;
+//   }
+//   return false;
+// }
